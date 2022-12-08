@@ -1,17 +1,67 @@
 /** @format */
 
-// import { useState, useEffect } from "react";
-// import cryptoAPI from "../Services/cryptoAPI";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import { useState, useEffect } from "react";
+import cryptoAPI from "../Services/cryptoAPI";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-// const Homepage = () => {
-//   //currency convertor/formatter
-//   const formatter = new Intl.NumberFormat("en-US", {
-//     style: "currency",
-//     currency: "USD",
-//     minimumFractionDigits: 2,
-//     notation: "compact",
-//   });
+import millify from "millify";
+import { Typography, Row, Col, Statistic } from "antd";
+import { Link } from "react-router-dom";
+
+const { Title } = Typography;
+
+const Homepage = () => {
+  const [globalData, setGlobalData] = useState({});
+
+  useEffect(() => {
+    cryptoAPI
+      .getGlobalData()
+      .then((response) => {
+        console.log(response.data.data);
+        setGlobalData(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  return (
+    <>
+      <Title level={2} className="heading">
+        Global Crypto Stats
+      </Title>
+      <Row>
+        <Col span={12}>
+          <Statistic
+            title="Total Cryptocurrencies"
+            value={globalData.totalCoins}
+          />
+        </Col>
+        <Col span={12}>
+          <Statistic title="Exchanges" value={globalData.totalExchanges} />
+        </Col>
+        <Col span={12}>
+          <Statistic
+            title="Total Market Cap"
+            value={millify(globalData.totalMarketCap)}
+          />
+        </Col>
+        <Col span={12}>
+          <Statistic
+            title="Total 24h Volume"
+            value={millify(globalData.total24hVolume)}
+          />
+        </Col>
+        <Col span={12}>
+          <Statistic
+            title="Total Markets"
+            value={millify(globalData.totalMarkets)}
+          />
+        </Col>
+      </Row>
+    </>
+  );
+};
 
 //   // number style formatter
 //   const numberStyle = new Intl.NumberFormat("en-US", {
@@ -130,10 +180,5 @@
 //     );
 //   }
 // };
-import React from "react";
-
-const Homepage = () => {
-  return <div>Homepage</div>;
-};
 
 export default Homepage;

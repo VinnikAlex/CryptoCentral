@@ -3,9 +3,18 @@
 import axios from "axios";
 
 const getCoins = async () => {
-  return axios.get(
-    "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&sparkline=false"
-  );
+  return axios
+    .get(
+      "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&sparkline=false"
+    )
+    .then(
+      (response) => {
+        console.log(response);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
 };
 
 const getGlobalData = async () => {

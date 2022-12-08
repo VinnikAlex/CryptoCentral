@@ -19,9 +19,8 @@ import {
 function App() {
   return (
     <div className="App">
-      <div className="navbar">
-        <Navbar />
-      </div>
+      <Navbar />
+
       <div className="main">
         <Layout>
           <div className="routes">
