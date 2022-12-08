@@ -1,0 +1,148 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.headerContainer {
+  max-width: 1140px;
+  margin: auto;
+}
+
+.globalStats {
+  padding: 2rem;
+  max-width: 1140px;
+  margin: auto;
+}
+
+.container .row {
+  max-width: 700px;
+  margin: auto;
+}
+
+.globalStats div h4 {
+  color: gray;
+  font-weight: 400;
+}
+
+.globalStats div p {
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+/* .cryptoHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+} */
+
+.cryptoContainer {
+  padding: 3rem;
+  margin: auto;
+  max-width: 1500px;
+}
+
+.cryptoCurrency {
+  width: 100vw;
+  height: 300px;
+  min-width: 300px;
+  cursor: pointer;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: rgb(242, 242, 242);
+  transition: all ease-in-out 0.2s;
+}
+
+.cryptoCurrency:hover {
+  transform: scale(1.02);
+  transition: all ease-in-out 0.2s;
+}
+
+.cryptoHeader {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(218, 218, 218);
+}
+
+.cryptoDetails {
+  font-weight: 500;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.cryptoDetails p {
+  padding: 0.5rem;
+}
+
+.headerGrid {
+  padding: 3rem;
+  margin: auto;
+}
+
+.headerGrid div {
+  padding: 1rem;
+}
+
+.headerGrid p {
+  color: grey;
+  font-weight: 500;
+  margin: 0;
+}
+.headerGrid h3 {
+  font-weight: 500;
+}
+
+.headerTitle {
+  padding: 2rem;
+}
+
+.headerInfo div {
+  padding: 0.5rem;
+}
+
+.container {
+  margin-top: 3rem;
+  margin-bottom: 8rem;
+}
