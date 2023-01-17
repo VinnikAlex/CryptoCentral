@@ -19,10 +19,12 @@ import {
 function App() {
   return (
     <div className="App">
+      {/* <div className="navbar"> */}
       <Navbar />
+      {/* </div> */}
 
       <div className="main">
-        <Layout>
+        <Layout breakpoint="xxl">
           <div className="routes">
             <Routes>
               <Route exact path="/" element={<Homepage />} />
@@ -47,7 +49,7 @@ function App() {
             level={5}
             style={{ color: "white", textAlign: "center" }}
           >
-            CryptoHome
+            CryptoCentral
             <br />
             All rights reserved
           </Typography.Title>

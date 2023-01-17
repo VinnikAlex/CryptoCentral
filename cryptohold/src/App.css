@@ -24,28 +24,44 @@ a:hover {
   overflow: hidden;
 }
 
+/* .navbar {
+  position: fixed;
+  height: 100vh;
+} */
+
 .main {
-  margin-left: 20%; /* Same as the width of the sidebar */
-  /* padding: 0px 10px; */
-  text-align: left;
+  margin-left: 350px;
 }
+
 .routes {
   padding: 20px;
 }
-.nav-container {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 20vw; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: rgb(0, 21, 41);
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;
-  text-align: left;
+
+.item-container a {
+  font-size: 1rem;
+  text-decoration: none;
 }
 
-.nav-container a {
+.auth {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.login-button {
+}
+.register-button {
+}
+
+.nav-container {
+  height: 100%;
+  width: 350px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #001529;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
 .logo-container {
@@ -79,21 +95,21 @@ a:hover {
 }
 
 @media screen and (max-width: 1300px) {
-  .main {
+  /* .main {
     margin-left: 50px;
-  }
+  } */
 }
 
 @media screen and (max-width: 1170px) {
-  .main {
+  /* .main {
     margin-left: 50px;
-  }
+  } */
 }
 
 @media screen and (max-width: 1000px) {
-  .main {
+  /* .main {
     margin-left: 100px;
-  }
+  } */
 }
 
 @media screen and (max-width: 800px) {
@@ -129,6 +145,7 @@ a:hover {
     position: absolute;
     right: 0px;
   }
+
   .home-title {
     font-size: 1.4rem !important;
   }
@@ -294,25 +311,10 @@ a:hover {
 .select-news {
   width: 180px;
 }
-.news-card {
-  min-height: 300px !important;
-}
-.news-image-container {
-  display: flex !important;
-  justify-content: space-between !important;
-}
-.news-title {
-  width: 70%;
+
+.crypto-news-container {
 }
 
-.news-image-container .img {
-  width: 100px;
-  height: 100px;
-}
-.news-card p {
-  color: black;
-  margin: 10px 0px !important;
-}
 .provider-container {
   display: flex;
   justify-content: space-between;
@@ -356,14 +358,22 @@ a:hover {
   margin: 0px 10px !important;
 }
 .search-crypto {
+  display: flex;
   margin: 20px auto 30px auto;
   width: 250px;
 }
-.crypto-card-container {
-  min-height: 65vh !important;
+
+.news-card {
+  overflow: hidden;
+  cursor: pointer;
+  /* transform: scale(1.03);
+  transition: ease-in-out 0.2s; */
+  /* padding: 1rem; */
 }
+
 .crypto-card {
   min-width: 250px;
+  max-width: 400px;
 }
 .crypto-card .crypto-image {
   width: 35px;
@@ -379,158 +389,4 @@ a:hover {
   flex-direction: column;
   padding: 20px;
   align-items: center;
-}
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~THIS IS THE HOMEPAGE CSS~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~THIS IS THE HOMEPAGE CSS~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~THIS IS THE HOMEPAGE CSS~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~THIS IS THE HOMEPAGE CSS~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-/** @format */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-* {
-  font-family: "Montserrat", sans-serif;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.headerContainer {
-  max-width: 1140px;
-  margin: auto;
-}
-
-.globalStats {
-  padding: 2rem;
-  max-width: 1140px;
-  margin: auto;
-}
-
-.container .row {
-  max-width: 700px;
-  margin: auto;
-}
-
-.globalStats div h4 {
-  color: gray;
-  font-weight: 400;
-}
-
-.globalStats div p {
-  font-weight: 400;
-  font-size: 1.5em;
-}
-
-/* .cryptoHeader {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-} */
-
-.cryptoContainer {
-  padding: 3rem;
-  margin: auto;
-  max-width: 1500px;
-}
-
-.cryptoCurrency {
-  width: 100vw;
-  height: 300px;
-  min-width: 300px;
-  cursor: pointer;
-  margin: 1rem;
-  padding: 0.5rem;
-  border-radius: 5px;
-  background-color: rgb(242, 242, 242);
-  transition: all ease-in-out 0.2s;
-}
-
-.cryptoCurrency:hover {
-  transform: scale(1.02);
-  transition: all ease-in-out 0.2s;
-}
-
-.cryptoHeader {
-  padding: 0.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgb(218, 218, 218);
-}
-
-.cryptoDetails {
-  font-weight: 500;
-  padding: 0.5rem;
-  text-align: left;
-}
-
-.cryptoDetails p {
-  padding: 0.5rem;
-}
-
-.headerGrid {
-  padding: 3rem;
-  margin: auto;
-}
-
-.headerGrid div {
-  padding: 1rem;
-}
-
-.headerGrid p {
-  color: grey;
-  font-weight: 500;
-  margin: 0;
-}
-.headerGrid h3 {
-  font-weight: 500;
-}
-
-.headerTitle {
-  padding: 2rem;
-}
-
-.headerInfo div {
-  padding: 0.5rem;
-}
-
-.container {
-  margin-top: 3rem;
-  margin-bottom: 8rem;
 }
